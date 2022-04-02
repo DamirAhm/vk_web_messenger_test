@@ -1,0 +1,10 @@
+export { default as CallsIcon } from './Calls';
+export { default as CommunitiesIcon } from './Communities';
+export { default as FriendsIcon } from './Friends';
+export { default as MessengerIcon } from './Messenger';
+export { default as MusicIcon } from './Music';
+export { default as MyPageIcon } from './MyPage';
+export { default as NewsIcon } from './News';
+export { default as ClipsIcon } from './TikTok';
+export { default as VideosIcon } from './Videos';
+export { default as VKLogo } from './VkLogo';

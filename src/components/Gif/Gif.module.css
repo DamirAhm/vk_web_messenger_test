@@ -1,0 +1,11 @@
+.image_container {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    border: 2px solid transparent;
+}
+.image_container img {
+    border-radius: 6px;
+}

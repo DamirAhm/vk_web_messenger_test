@@ -1,0 +1,125 @@
+.page {
+    width: 100%;
+    height: 100vh;
+
+    position: relative;
+    background-color: var(--background-color);
+}
+
+/* ------------- HEADER -------------- */
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 48px;
+    background-color: #fff;
+
+    font-size: 12.5px;
+}
+.header_nav {
+    height: 100%;
+    width: 960px;
+
+    padding: 0;
+    margin: 0 auto;
+
+    display: flex;
+    align-items: center;
+
+    list-style: none;
+}
+.header_logo {
+    padding-right: calc(165px - 136px);
+}
+.header_input {
+    width: 240px;
+    height: 100%;
+
+    padding-right: 15px;
+
+    display: flex;
+    align-items: center;
+}
+.header_input input {
+    width: 218px;
+    height: 32px;
+
+    background-color: var(--background-color);
+
+    border: none;
+    border-radius: 7px;
+
+    padding-left: 10px;
+}
+.header_others {
+    width: calc(48px + 386px + 48px);
+}
+.header_avatar {
+    width: 48px;
+    padding-left: 0px;
+}
+.header_avatar_photo {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background-color: var(--accent);
+}
+
+/* ------------- PAGE -------------- */
+.page_container {
+    width: 960px;
+    height: calc(100%);
+    margin: 0px auto;
+    padding-top: calc(15px + 48px);
+    padding-bottom: 15px;
+
+    display: grid;
+    grid-template-columns: 164px 550px 250px;
+}
+
+/* ------------ LEFT SIDEBAR ---------- */
+.left_sidebar {
+    font-size: 13px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.left_sidebar_link {
+    height: 30px;
+    line-height: 30px;
+    display: grid;
+    grid-template-columns: 30px 121px;
+    flex-grow: 1;
+}
+.left_sidebar_link_logo {
+    display: flex;
+    align-items: center;
+}
+.left_sidebar_link_logo * {
+    color: var(--accent);
+}
+.left_sidebar_link_text {
+    height: 30px;
+    line-height: 30px;
+    align-items: center;
+}
+
+/* ----------- RIGHT SIDEBAR ---------- */
+.right_sidebar {
+    width: 230px;
+    height: 108px;
+    margin-left: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+
+    font-size: 13px;
+
+    padding: 13px 0;
+}
+.right_sidebar_item {
+    color: #2a5885;
+    height: 32px;
+    padding: 0 5px 0 20px;
+}
