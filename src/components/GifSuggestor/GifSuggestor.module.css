@@ -1,5 +1,5 @@
 .gif_suggestions {
-    width: 492px;
+    width: 502px;
     height: 400px;
     overflow-y: auto;
     overflow-x: hidden;
@@ -30,7 +30,8 @@
 
     display: grid;
     grid-template-rows: repeat(auto-fill, 100px);
-    gap: 5px;
+    column-gap: 5px;
+    row-gap: 10px;
 }
 .gif_suggestions_images_row {
     width: 100%;
@@ -39,10 +40,15 @@
     display: flex;
     justify-content: space-around;
 }
-.gif_suggestions_image:focus-within img {
-    border: 2px solid var(--accent);
-
+.gif_suggestions_image button {
+    outline: none;
+    cursor: pointer;
+}
+.gif_suggestions_image:focus-within img,
+.gif_suggestions_image:hover img {
+    outline: white solid 2px;
     transform: scale(1.1);
+    box-shadow: 1px 10px 41px -6px #000;
 }
 
 .gif_suggestions_not_found {
