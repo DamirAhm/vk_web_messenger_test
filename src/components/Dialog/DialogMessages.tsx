@@ -38,11 +38,13 @@ const DialogMessages: React.FC<Props> = ({ messages }) => {
             const timeString = timeFromTimestamp(timestamp);
 
             return {
-                width: imageWidth.toString(),
-                height: imageHeight.toString(),
-                timeString,
+                image: {
+                    width: imageWidth.toString(),
+                    height: imageHeight.toString(),
+                    url: original.url,
+                },
                 title,
-                url: original.url,
+                timeString,
                 id,
             };
         });
@@ -50,16 +52,9 @@ const DialogMessages: React.FC<Props> = ({ messages }) => {
 
     return (
         <div className={styles.dialog_messages} ref={messagesContainer}>
-            {gifsData.map(({ id, height, width, timeString, title, url }) => (
+            {gifsData.map(({ id, image, timeString, title }) => (
                 <div key={id} className={styles.dialog_messeges_message}>
-                    <Gif
-                        image={{
-                            url,
-                            width,
-                            height,
-                        }}
-                        title={title}
-                    />
+                    <Gif image={image} title={title} />
                     <span className={styles.message_timestamp}>
                         {timeString}
                     </span>
