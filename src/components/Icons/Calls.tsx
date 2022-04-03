@@ -11,7 +11,7 @@ const CallsIcon: React.FC = () => {
             <g
                 id="phone_outline_20__Icons"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
                 fillRule="evenodd"
             >

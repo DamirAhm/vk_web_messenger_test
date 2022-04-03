@@ -11,7 +11,7 @@ const MessengerIcon: React.FC = () => {
             <g
                 id="message_outline_20__Page-2"
                 stroke="none"
-                stroke-width="1"
+                strokeWidth="1"
                 fill="none"
                 fillRule="evenodd"
             >
