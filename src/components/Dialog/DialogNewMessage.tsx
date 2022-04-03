@@ -33,6 +33,7 @@ const DialogNewMessage: React.FC<Props> = ({ text, setText, addGif }) => {
             <button className={styles.dialog_chat_new_message_attachment} />
             <div className={styles.dialog_chat_new_message_input_container}>
                 <input
+                    autoFocus
                     type="text"
                     className={styles.dialog_chat_new_message_input}
                     placeholder="Напишите сообщение..."
