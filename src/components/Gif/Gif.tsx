@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { Image } from '../../types';
 
@@ -15,13 +15,22 @@ const Gif: React.FC<Props> = ({
     title,
     onClick,
 }) => {
+    const [loading, setLoading] = useState(true);
+
     return (
         <button
             onClick={onClick}
             className={styles.image_container}
             tabIndex={0}
         >
-            <img width={width} height={height} src={url} alt={title} />
+            <img
+                onLoad={() => setLoading(false)}
+                width={width}
+                height={height}
+                src={url}
+                alt={title}
+                className={loading ? styles.animated_background : ''}
+            />
         </button>
     );
 };

@@ -52,8 +52,11 @@ const DialogMessages: React.FC<Props> = ({ messages }) => {
 
     return (
         <div className={styles.dialog_messages} ref={messagesContainer}>
-            {gifsData.map(({ id, image, timeString, title }) => (
-                <div key={id} className={styles.dialog_messeges_message}>
+            {gifsData.map(({ id, image, timeString, title }, i) => (
+                <div
+                    key={`${id}_${i}`}
+                    className={styles.dialog_messeges_message}
+                >
                     <Gif image={image} title={title} />
                     <span className={styles.message_timestamp}>
                         {timeString}

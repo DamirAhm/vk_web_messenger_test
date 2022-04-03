@@ -7,5 +7,33 @@
     border: 2px solid transparent;
 }
 .image_container img {
+    background-color: var(--background-color);
     border-radius: 6px;
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: 0 -100px;
+    }
+    100% {
+        background-position: 0 100px;
+    }
+}
+
+.animated_background {
+    animation-duration: 4s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: placeHolderShimmer;
+    animation-timing-function: ease-out;
+    background-color: #f6f7f8;
+    background: linear-gradient(
+        to bottom,
+        #eeeeee 0%,
+        #bbbbbb 30%,
+        #eeeeee 50%
+    );
+    background-size: 100% 100%;
+    height: 100%;
+    position: relative;
 }
