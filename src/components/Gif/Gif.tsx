@@ -19,6 +19,7 @@ const Gif: React.FC<Props> = ({
 
     return (
         <button
+            aria-label={`Отправить изображение - ${title}`}
             onClick={onClick}
             className={styles.image_container}
             tabIndex={0}

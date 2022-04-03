@@ -9,7 +9,7 @@ const Header: React.FC = () => {
         <header className={styles.header}>
             <ul className={styles.header_nav}>
                 <li className={styles.header_logo}>
-                    <a href="#">
+                    <a href="#" aria-label="Перейти на главную">
                         <VKLogo />
                     </a>
                 </li>
@@ -18,7 +18,11 @@ const Header: React.FC = () => {
                 </li>
                 <li className={styles.header_others} />
                 <li className={styles.header_avatar}>
-                    <button className={styles.header_avatar_photo} />
+                    <a
+                        href="#"
+                        aria-label="Перейти в свой профиль"
+                        className={styles.header_avatar_photo}
+                    ></a>
                 </li>
             </ul>
         </header>

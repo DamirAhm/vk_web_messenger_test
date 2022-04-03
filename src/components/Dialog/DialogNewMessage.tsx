@@ -35,7 +35,10 @@ const DialogNewMessage: React.FC<Props> = ({ sendGif }) => {
 
     return (
         <div className={styles.dialog_chat_new_message}>
-            <button className={styles.dialog_chat_new_message_attachment} />
+            <button
+                aria-label="Отправить вложение"
+                className={styles.dialog_chat_new_message_attachment}
+            />
             <div className={styles.dialog_chat_new_message_input_container}>
                 <input
                     autoFocus
@@ -50,7 +53,10 @@ const DialogNewMessage: React.FC<Props> = ({ sendGif }) => {
                     <GifSuggestor onGifPicked={onGifPicked} search={search} />
                 )}
             </div>
-            <button className={styles.dialog_chat_new_message_send} />
+            <button
+                aria-label="Отправить сообщение"
+                className={styles.dialog_chat_new_message_send}
+            />
         </div>
     );
 };
