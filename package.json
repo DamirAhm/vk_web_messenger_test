@@ -6,7 +6,7 @@
         "dev": "vite",
         "build": "tsc && vite build",
         "preview": "vite preview",
-        "start": "npx sirv dist -G -B"
+        "start": "sirv dist -G -B"
     },
     "dependencies": {
         "@types/axios": "^0.14.0",
