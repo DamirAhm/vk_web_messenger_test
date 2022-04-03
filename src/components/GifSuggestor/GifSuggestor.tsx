@@ -127,7 +127,7 @@ const GifSuggestor: React.FC<Props> = ({ search, addGif }) => {
             observer.observe(lastRowRef.current);
         }
 
-        () => {
+        return () => {
             observer.disconnect();
         };
     }, [offset, loading]);
