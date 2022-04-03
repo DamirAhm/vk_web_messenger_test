@@ -8,7 +8,6 @@ import DialogMessages from './DialogMessages';
 import DialogNewMessage from './DialogNewMessage';
 
 const Dialog: React.FC = () => {
-    const [text, setText] = useState('');
     const [gifs, setGifs] = useState<Message[]>([]);
 
     const addGif = useCallback(
@@ -19,7 +18,6 @@ const Dialog: React.FC = () => {
             };
 
             setGifs((prev) => [newMessage, ...prev]);
-            setText('');
         },
         [setGifs]
     );
@@ -30,7 +28,7 @@ const Dialog: React.FC = () => {
 
             <DialogMessages messages={gifs} />
 
-            <DialogNewMessage addGif={addGif} setText={setText} text={text} />
+            <DialogNewMessage sendGif={addGif} />
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useCallback, useMemo, useState } from 'react';
 
 import GifSuggestor from '../GifSuggestor';
 
@@ -7,9 +7,7 @@ import styles from './Dialog.module.css';
 import { Gif } from '../../types';
 
 type Props = {
-    text: string;
-    setText: (newText: string) => void;
-    addGif: (newGif: Gif) => void;
+    sendGif: (newGif: Gif) => void;
 };
 
 const GIF_START = '/gif';
@@ -22,11 +20,18 @@ const getSearchText = (searchText: string) => {
     return match?.[1] ?? null;
 };
 
-const DialogNewMessage: React.FC<Props> = ({ text, setText, addGif }) => {
+const DialogNewMessage: React.FC<Props> = ({ sendGif }) => {
+    const [text, setText] = useState('');
+
     const search = useMemo(
         () => (gifSearchRegExp.test(text) ? getSearchText(text) : null),
         [text]
     );
+
+    const onGifPicked = useCallback((newGif: Gif) => {
+        setText('');
+        sendGif(newGif);
+    }, []);
 
     return (
         <div className={styles.dialog_chat_new_message}>
@@ -42,7 +47,7 @@ const DialogNewMessage: React.FC<Props> = ({ text, setText, addGif }) => {
                 />
 
                 {search !== null && (
-                    <GifSuggestor addGif={addGif} search={search} />
+                    <GifSuggestor onGifPicked={onGifPicked} search={search} />
                 )}
             </div>
             <button className={styles.dialog_chat_new_message_send} />

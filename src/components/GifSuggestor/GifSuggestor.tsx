@@ -11,7 +11,7 @@ import { Gif as GifType } from '../../types';
 
 type Props = {
     search: string;
-    addGif: (gif: GifType) => void;
+    onGifPicked: (gif: GifType) => void;
 };
 
 enum arrowKeys {
@@ -66,7 +66,7 @@ const createRowsFromGifs = (gifs: GifType[]) => {
     );
 };
 
-const GifSuggestor: React.FC<Props> = ({ search, addGif }) => {
+const GifSuggestor: React.FC<Props> = ({ search, onGifPicked }) => {
     const [displayableGifs, setDisplayableGifs] = useState<GifType[]>([]);
     const [loading, setLoading] = useState(false);
     const [offset, setOffset] = useState(0);
@@ -263,7 +263,7 @@ const GifSuggestor: React.FC<Props> = ({ search, addGif }) => {
                                             }}
                                             title={title}
                                             onClick={() => {
-                                                addGif(gif);
+                                                onGifPicked(gif);
                                             }}
                                         />
                                     </div>
