@@ -85,7 +85,6 @@
 }
 
 .dialog_messages {
-    height: 815px;
     overflow: auto;
 
     padding: 0 10px 10px 10px;
